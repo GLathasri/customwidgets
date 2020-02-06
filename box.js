@@ -118,6 +118,6 @@
 			
 			this.render(this.$value, this.$info, this.$color);
 		}
-	};	
-	customElements.define("com-demo-gauge", Box);
+	});	
+	
 })();
