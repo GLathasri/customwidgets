@@ -14,12 +14,12 @@
 			</fieldset>
 		</form>
 	`;
-
-	class BoxSps extends HTMLElement {
+	customElements.define("com-demo-box-sps", class BoxSps extends HTMLElement {
+	
 		constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
-			//this._shadowRoot.appendChild(template.content.cloneNode(true));
+			this._shadowRoot.appendChild(template.content.cloneNode(true));
 			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
 		}
 
@@ -41,7 +41,7 @@
 		get color() {
 			return this._shadowRoot.getElementById("sps_color").value;
 		}
-	};
+	});
 
-customElements.define("com-demo-box-sps", BoxSps);
+
 })();
