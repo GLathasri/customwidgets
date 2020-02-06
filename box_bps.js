@@ -20,8 +20,8 @@
 		}
 		</style>
 	`;
-
-	class BoxBps extends HTMLElement {
+	customElements.define("com-demo-box-bps", class BoxBps extends HTMLElement {
+	
 		constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -47,7 +47,7 @@
 		get color() {
 			return this._shadowRoot.getElementById("bps_color").value;
 		}
-	}
+	});
 
-	customElements.define("com-demo-box-bps", BoxBps);
+	
 })();
