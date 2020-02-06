@@ -60,7 +60,7 @@
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));
+			//shadowRoot.appendChild(template.content.cloneNode(true));
 			
 			this.$style = shadowRoot.querySelector('style');			
 			this.$svg = shadowRoot.querySelector('svg');
