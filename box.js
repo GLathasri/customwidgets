@@ -55,8 +55,8 @@
 		  </div>
 		</div>
 	`;
-
-	class Box extends HTMLElement {
+	customElements.define('com-demo-gauge', class Box extends HTMLElement {
+	
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
